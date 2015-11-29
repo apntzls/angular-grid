@@ -1,0 +1,74 @@
+.contacts th {
+	cursor: pointer;
+}
+.contacts th i {
+	visibility: hidden;
+	z-index: 1000;
+}
+.contacts th:hover i {
+	visibility: visible;
+}
+.contacts th i:hover {
+	color: #9a66ff;
+}
+.dynamic th {
+	cursor: text;
+}
+td,
+th {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.highlighted {
+	background: #BDA0CB
+}
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+	/*
+          Label data for responsive layout
+          */
+	.contacts td:nth-of-type(1):before {
+		content: "First Name";
+	}
+	.contacts td:nth-of-type(2):before {
+		content: "Last Name";
+	}
+	.contacts td:nth-of-type(3):before {
+		content: "Phone";
+	}
+	.contacts td:nth-of-type(4):before {
+		content: "Email";
+	}
+	.contacts td:nth-of-type(5):before {
+		content: "Company";
+	}
+	.dynamic td:nth-of-type(1):before {
+		content: "First Name";
+	}
+	.dynamic td:nth-of-type(2):before {
+		content: "Last Name";
+	}
+	.dynamic td:nth-of-type(3):before {
+		content: "User Name";
+	}
+	.dynamic td:nth-of-type(4):before {
+		content: "Email";
+	}
+	.dynamic td:nth-of-type(5):before {
+		content: "City";
+	}
+	.dynamic td:nth-of-type(6):before {
+		content: "State";
+	}
+	.dynamic td:nth-of-type(7):before {
+		content: "Country";
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	body {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+}

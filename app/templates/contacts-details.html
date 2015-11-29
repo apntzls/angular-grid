@@ -1,0 +1,10 @@
+<thead>
+	<tr>
+		<th ng-repeat="contact in headersCollection" ng-click="sort(contact)">{{contact}}</th>
+	</tr>
+</thead>
+<tbody>
+	<tr ng-repeat="row in gridData | orderBy:sortBy:reverse |  filter:search">
+		<td ng-repeat="data in row" ng-bind-html="data | highlight:search"> {{ row[columnOrder[$index]] }}</td>
+	</tr>
+</tbody>
